@@ -9,6 +9,8 @@
 import UIKit
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var movies: [NSDictionary]! = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,7 +28,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             
             var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSDictionary
             
-            NSLog("Resonse: %@", responseDictionary)
+            self.movies = responseDictionary["movies"] as [NSDictionary]
+            self.tableView.reloadData()
         }
         
     }
@@ -37,14 +40,18 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return movies.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as MovieCell
         
-        cell.titleLabel.text = "American Sniper"
-        cell.synopsisLabel.text = "Killer movie"
+        var movie = movies[indexPath.row]
+        cell.titleLabel.text = movie["title"] as? String
+        cell.synopsisLabel.text = movie["synopsis"] as? String
+        
+        var url = movie.valueForKeyPath("posters.thumbnail") as String
+        cell.posterView.setImageWithURL(NSURL(string: url))
         
         return cell
     }

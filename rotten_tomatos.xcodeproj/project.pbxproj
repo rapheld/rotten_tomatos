@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B458099655A6A026B0514FE3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CABA4CEB09236771E0489E2 /* libPods.a */; };
 		D81458F51A883B2F0070581E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81458F41A883B2F0070581E /* AppDelegate.swift */; };
 		D81458FA1A883B2F0070581E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81458F81A883B2F0070581E /* Main.storyboard */; };
 		D81458FC1A883B2F0070581E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81458FB1A883B2F0070581E /* Images.xcassets */; };
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CABA4CEB09236771E0489E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F5D797291D4B93CDDE4843 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		968FB8A9AA3F6BE61374607F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D81458EF1A883B2F0070581E /* rotten_tomatos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rotten_tomatos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81458F31A883B2F0070581E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D81458F41A883B2F0070581E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,7 @@
 		D814590A1A883B2F0070581E /* rotten_tomatosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rotten_tomatosTests.swift; sourceTree = "<group>"; };
 		D86BF49B1A8843B4006E59F0 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesViewController.swift; path = ../MoviesViewController.swift; sourceTree = "<group>"; };
 		D86BF49D1A884543006E59F0 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		D89F9A101A88924A00ED6710 /* rotten_tomatos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rotten_tomatos-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B458099655A6A026B0514FE3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +64,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D535CA677FF1747F940DA67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92F5D797291D4B93CDDE4843 /* Pods.debug.xcconfig */,
+				968FB8A9AA3F6BE61374607F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D194F86403A7F84BE81C653A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CABA4CEB09236771E0489E2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D81458E61A883B2F0070581E = {
 			isa = PBXGroup;
 			children = (
 				D81458F11A883B2F0070581E /* rotten_tomatos */,
 				D81459071A883B2F0070581E /* rotten_tomatosTests */,
 				D81458F01A883B2F0070581E /* Products */,
+				8D535CA677FF1747F940DA67 /* Pods */,
+				D194F86403A7F84BE81C653A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +111,7 @@
 				D81458FB1A883B2F0070581E /* Images.xcassets */,
 				D81458FD1A883B2F0070581E /* LaunchScreen.xib */,
 				D81458F21A883B2F0070581E /* Supporting Files */,
+				D89F9A101A88924A00ED6710 /* rotten_tomatos-Bridging-Header.h */,
 			);
 			path = rotten_tomatos;
 			sourceTree = "<group>";
@@ -122,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D814590E1A883B2F0070581E /* Build configuration list for PBXNativeTarget "rotten_tomatos" */;
 			buildPhases = (
+				679791ACF06C4A64A5E54482 /* Check Pods Manifest.lock */,
 				D81458EB1A883B2F0070581E /* Sources */,
 				D81458EC1A883B2F0070581E /* Frameworks */,
 				D81458ED1A883B2F0070581E /* Resources */,
+				4FA8719CFC7B018ACCBB1766 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +237,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FA8719CFC7B018ACCBB1766 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		679791ACF06C4A64A5E54482 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D81458EB1A883B2F0070581E /* Sources */ = {
@@ -338,21 +399,28 @@
 		};
 		D814590F1A883B2F0070581E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92F5D797291D4B93CDDE4843 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = rotten_tomatos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rotten_tomatos/rotten_tomatos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D81459101A883B2F0070581E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 968FB8A9AA3F6BE61374607F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = rotten_tomatos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rotten_tomatos/rotten_tomatos-Bridging-Header.h";
 			};
 			name = Release;
 		};
